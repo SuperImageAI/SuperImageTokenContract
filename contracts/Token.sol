@@ -65,6 +65,7 @@ contract Token is Initializable, ERC20Upgradeable, OwnableUpgradeable, ERC20Perm
         isLockActive = true;
     }
 
+    
     function setMinter(address minter, uint256 amount) public onlyOwner {
         require(amount <= maxSupply - alreadyMinted, "max supply reached");
         minter2MintAmount[minter] = amount;
