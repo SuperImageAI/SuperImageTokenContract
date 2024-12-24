@@ -8,8 +8,9 @@ dotenv.config();
 require('@openzeppelin/hardhat-upgrades');
 
 
+// @ts-ignore
 const config: HardhatUserConfig = {
-  solidity: "0.8.20",
+  solidity: "0.8.22",
   sourcify: {
     // Enable Sourcify verification by default
     enabled: true,
@@ -43,9 +44,7 @@ const config: HardhatUserConfig = {
     },
     dbcMainnet: {
       url: 'https://rpc.dbcwallet.io',
-      accounts: {
-        mnemonic: process.env.MNEMONIC || '',
-      },
+      accounts: [process.env.PRIVATE_KEY],
       chainId: 19880818,
       timeout: 600000,
     }
@@ -81,15 +80,14 @@ const config: HardhatUserConfig = {
         network: "dbcMainnet",
         chainId: 19880818,
         urls: {
-          apiURL: "https://blockscout.dbcscan.io/api",
-          browserURL: "https://blockscout.dbcscan.io",
+          apiURL: "https://www.dbcscan.io/api",
+          browserURL: "https://www.dbcscan.io",
         },
       }
     ]
   }
 };
 
-// proxy:0x54d6F84B8337a897238C0C07C2ebbf74fcb087BC
-// logic:0x8a26580DA88DB2E88c48E5694B5F0eF634855C4D
+
 
 export default config;
