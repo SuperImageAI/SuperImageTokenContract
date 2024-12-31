@@ -15,16 +15,16 @@ request_token_upgrade_auth-dbc-testnet:
 
 
 deploy_multi_sign_time_lock-dbc-testnet:
-	source .env && npx hardhat run script/deploy_multi_sign_time_lock.ts --network dbcTestnet
+	source .env && npx hardhat run script/deploy_multsig_time_lock.ts --network dbcTestnet
 
 verify_multi_sign_time_lock-dbc-testnet:
 	source .env && npx hardhat verify --network dbcTestnet $MULTI_SGIN_TIME_LOCK_CONTRACT
 
 upgrade_multi_sign_time_lock-dbc-testnet:
-	npx hardhat run script/upgrade_multi_sign_time_lock.ts --network dbcTestnet
+	npx hardhat run script/upgrade_multsig_time_lock.ts --network dbcTestnet
 
 request_multi_sign_time_lock_upgrade_auth-dbc-testnet:
-	source .env && npx hardhat run script/create_proposal_for_requesting_multi_sign_time_lock_upgrade_permission.ts --network dbcTestnet
+	source .env && npx hardhat run script/create_proposal_for_requesting_multsig_time_lock_upgrade_permission.ts --network dbcTestnet
 
 
 deploy-dbc-mainnet:
@@ -41,13 +41,13 @@ request_token_upgrade_auth-dbc-mainnet:
 
 
 deploy_multi_sign_time_lock-dbc-mainnet:
-	source .env && npx hardhat run script/deploy_multi_sign_time_lock.ts --network dbcMainnet
+	source .env && npx hardhat run script/deploy_multsig_time_lock.ts --network dbcMainnet
 
 verify_multi_sign_time_lock-dbc-mainnet:
 	source .env && npx hardhat verify --network dbcMainnet $MULTI_SGIN_TIME_LOCK_CONTRACT
 
 upgrade_multi_sign_time_lock-dbc-mainnet:
-	npx hardhat run script/upgrade_multi_sign_time_lock.ts --network dbcMainnet
+	npx hardhat run script/upgrade_multsig_time_lock.ts --network dbcMainnet
 
 request_multi_sign_time_lock_upgrade_auth-dbc-mainnet:
-	source .env && npx hardhat run script/create_proposal_for_requesting_multi_sign_time_lock_upgrade_permission.ts --network dbcMainnet
+	source .env && npx hardhat run script/create_proposal_for_requesting_multsig_time_lock_upgrade_permission.ts --network dbcMainnet

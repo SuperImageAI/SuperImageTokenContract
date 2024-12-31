@@ -60,6 +60,11 @@
       "address": "0xFDB8Ca16C0f3372a86Ab8248A3C10A4065505A1c",
       "txHash": "0x365f62b28206deeb2c561afdaaabb763e57a67812ef69a7136303392055137a2",
       "kind": "transparent"
+    },
+    {
+      "address": "0x15f63ea1cc91D2fCE004A96ed0f8015aBb1D96F5",
+      "txHash": "0x49fe1aa7f3fc3a7d978e2aea460a3f545885c8786c388be8adec487e3065f84e",
+      "kind": "uups"
     }
   ],
   "impls": {
@@ -4199,6 +4204,239 @@
               "slot": "4"
             }
           ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "65643f06bf218cc077e4dda25767334eba62fd7403cd88e70288534b4cd2b1d0": {
+      "address": "0x66a1C9658cCB12A31b195D14FBB354a0C2A3E321",
+      "txHash": "0xa1411ab1ad3c5c1442b676e455c3b90923c393a52746624ca9e8d8f9dbb674f9",
+      "layout": {
+        "solcVersion": "0.8.22",
+        "storage": [
+          {
+            "label": "signers",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_array(t_address)dyn_storage",
+            "contract": "MultSigTimeLock",
+            "src": "contracts/MultSigTimeLock.sol:22"
+          },
+          {
+            "label": "requiredApproveCount",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "MultSigTimeLock",
+            "src": "contracts/MultSigTimeLock.sol:23"
+          },
+          {
+            "label": "minDelaySeconds",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "MultSigTimeLock",
+            "src": "contracts/MultSigTimeLock.sol:24"
+          },
+          {
+            "label": "proposals",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_mapping(t_uint256,t_struct(Proposal)5707_storage)",
+            "contract": "MultSigTimeLock",
+            "src": "contracts/MultSigTimeLock.sol:26"
+          },
+          {
+            "label": "approvals",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))",
+            "contract": "MultSigTimeLock",
+            "src": "contracts/MultSigTimeLock.sol:27"
+          },
+          {
+            "label": "proposalCount",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_uint256",
+            "contract": "MultSigTimeLock",
+            "src": "contracts/MultSigTimeLock.sol:28"
+          },
+          {
+            "label": "disableUpgrade",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_bool",
+            "contract": "MultSigTimeLock",
+            "src": "contracts/MultSigTimeLock.sol:41"
+          },
+          {
+            "label": "canUpgradeAddress",
+            "offset": 1,
+            "slot": "6",
+            "type": "t_address",
+            "contract": "MultSigTimeLock",
+            "src": "contracts/MultSigTimeLock.sol:42"
+          },
+          {
+            "label": "proposal2ExecuteExpireAt",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "MultSigTimeLock",
+            "src": "contracts/MultSigTimeLock.sol:44"
+          }
+        ],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)65_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]",
+            "numberOfBytes": "32"
+          },
+          "t_bytes_storage": {
+            "label": "bytes",
+            "numberOfBytes": "32"
+          },
+          "t_enum(ProposalType)5738": {
+            "label": "enum MultSigTimeLock.ProposalType",
+            "members": [
+              "Normal",
+              "UpgradeContract",
+              "AddSigner",
+              "RemoveSigner",
+              "UpdateMinDelaySeconds",
+              "DisableContractUpgrade"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_bool))": {
+            "label": "mapping(uint256 => mapping(address => bool))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Proposal)5707_storage)": {
+            "label": "mapping(uint256 => struct MultSigTimeLock.Proposal)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Proposal)5707_storage": {
+            "label": "struct MultSigTimeLock.Proposal",
+            "members": [
+              {
+                "label": "target",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "data",
+                "type": "t_bytes_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "canExecuteAfterTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "canVoteBeforeTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "executed",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "proposalType",
+                "type": "t_enum(ProposalType)5738",
+                "offset": 1,
+                "slot": "4"
+              },
+              {
+                "label": "newSigner",
+                "type": "t_address",
+                "offset": 2,
+                "slot": "4"
+              },
+              {
+                "label": "minDelaySeconds",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "canUpgradeAddress",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "6"
+              }
+            ],
+            "numberOfBytes": "224"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
           "erc7201:openzeppelin.storage.Initializable": [
             {
               "contract": "Initializable",
