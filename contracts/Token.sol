@@ -81,7 +81,7 @@ UUPSUpgradeable
         __ERC20Burnable_init();
         __UUPSUpgradeable_init();
 
-        maxSupply = 10_000_000_000 * 10 ** decimals();
+        maxSupply = 100_000_000_000 * 10 ** decimals();
         initSupply = maxSupply;
 
         _mint(initialOwner, initSupply);
